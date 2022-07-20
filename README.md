@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Write a ruby script that:
 
-Things you may want to cover:
+a. Receives a log as argument (webserver.log is provided)
+e.g.: ./parser.rb webserver.log
 
-* Ruby version
+b. Returns the following:
 
-* System dependencies
+> list of webpages with most page views ordered from most pages views to less page views
+e.g.:
+/home 90 visits /index 80 visits etc... 
 
-* Configuration
+> list of webpages with most
+unique page views also ordered
+e.g.:
+/about/2 8 unique views
+/index 5 unique views etc...
 
-* Database creation
+* How to run log parser
 
-* Database initialization
+>rails r ./parser.rb webserver.log
+
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+>bundle exec rspec ./spec/lib/log_processor_spec.rb 
